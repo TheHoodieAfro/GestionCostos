@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Accordion fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1039.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <panes>
+    <TitledPane fx:id="ProductosPane" animated="false" prefHeight="422.0" prefWidth="844.0" text="Productos">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="29.0" text="Productos:" />
+                  <Label layoutX="205.0" layoutY="65.0" text="Nombre" />
+                  <Label layoutX="946.0" layoutY="65.0" text="MC" />
+                  <Label layoutX="547.0" layoutY="65.0" text="Precio de venta" />
+                  <Label layoutX="427.0" layoutY="65.0" text="ID" />
+                  <Label layoutX="739.0" layoutY="65.0" text="Costo de venta" />
+                  <TextField fx:id="NombreTxt" layoutX="103.0" layoutY="25.0" prefHeight="25.0" prefWidth="248.0" />
+                  <TextField fx:id="IDTxt" layoutX="389.0" layoutY="25.0" prefHeight="25.0" prefWidth="88.0" />
+                  <TextField fx:id="PrecioTxt" layoutX="514.0" layoutY="25.0" />
+                  <TextField fx:id="CostoTxt" layoutX="704.0" layoutY="25.0" />
+                  <Button fx:id="AñadirBtn" layoutX="908.0" layoutY="15.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="94.0" text="Añadir">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <ListView fx:id="ProductosList" layoutX="103.0" layoutY="106.0" prefHeight="439.0" prefWidth="900.0" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="IndicadoresPane" animated="false" text="Indicadores">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="ApalancamientoPane" animated="false" text="Apalancamiento operativo">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="269.0" layoutY="76.0" text="Utilidad Operativa:" />
+                  <TextField fx:id="UOTxt" layoutX="393.0" layoutY="72.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Button fx:id="GuardarBtn" layoutX="632.0" layoutY="55.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="117.0" text="Guardar">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="57.0" layoutY="256.0" text="Apalancamiento">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7cacd" height="103.0" layoutX="269.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="499.0" />
+                  <Label layoutX="94.0" layoutY="293.0" text="operativo">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AOLbl" layoutX="505.0" layoutY="285.0" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+      <TitledPane fx:id="UtilidadPane" animated="false" text="Utilidad neta">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="273.0" layoutY="65.0" text="Utilidad Deseada:" />
+                  <TextField fx:id="UtilidadDTxt" layoutX="403.0" layoutY="61.0" prefHeight="25.0" prefWidth="232.0" />
+                  <Button fx:id="GenerarBtn" layoutX="666.0" layoutY="43.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="142.0" text="Generar">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d2d6da" height="384.0" layoutX="120.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" width="788.0" />
+                  <Line endX="433.0" endY="-26.0" layoutX="475.0" layoutY="204.0" startX="-355.0" startY="-26.0" />
+                  <Line endX="-154.0" endY="214.0" layoutX="565.0" layoutY="291.0" startX="-154.0" startY="-170.0" />
+                  <Label layoutX="225.0" layoutY="121.0" prefHeight="55.0" prefWidth="95.0" text="Estado">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="629.0" layoutY="125.0" text="Valor">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="214.0" layoutY="231.0" text="Unidades monetarias" />
+                  <Label layoutX="245.0" layoutY="370.0" text="Unidades" />
+                  <Label fx:id="UMLbl" layoutX="652.0" layoutY="231.0" />
+                  <Label fx:id="ULbl" layoutX="652.0" layoutY="370.0" />
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane fx:id="GraficosPane" animated="false" text="Graficos">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </TitledPane>
+  </panes>
+</Accordion>
